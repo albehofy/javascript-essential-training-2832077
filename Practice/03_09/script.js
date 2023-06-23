@@ -9,9 +9,21 @@
 
 const backpack = {
   name: "Everyday Backpack",
+  editName: function (name) {
+    this.name = name;
+  },
   volume: 30,
+  editVolume: function (vol) {
+    this.volume = vol;
+  },
   color: "grey",
+  editColor: function (color) {
+    this.color = color;
+  },
   pocketNum: 15,
+  editpocKNum: function (pocKNum) {
+    this.pocketNum = pocKNum;
+  },
   strapLength: {
     left: 26,
     right: 26,
@@ -24,3 +36,4 @@ const backpack = {
     this.strapLength.right = lengthRight;
   },
 };
+console.log(backpack);
