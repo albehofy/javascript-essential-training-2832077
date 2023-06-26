@@ -21,18 +21,18 @@ console.log("Original array:", deskArray);
 
 // Remove the last item:
 // @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop
-// deskArray.pop();
-// console.log("New array:", deskArray);
+deskArray.pop();
+console.log("New array:", deskArray);
 
 // Add last item as the first item on the array:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift
-// deskArray.unshift(deskArray.pop());
-// console.log("Last item is now first:", deskArray);
+deskArray.unshift(deskArray.pop());
+console.log("Last item is now first:", deskArray);
 
 // Sort items by alphabetical order:
 // @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort
-// deskArray.sort();
-// console.log("Sorted array:", deskArray);
+deskArray.sort();
+console.log("Sorted array:", deskArray);
 
 // Find "notebook":
 // @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find
@@ -42,6 +42,6 @@ console.log("Original array:", deskArray);
 // Find and remove an item:
 // @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice
 // @link https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf
-// let remove = "notebook";
-// deskArray.splice(deskArray.indexOf(remove), 1);
-// console.log(`Array with "${remove}" removed:`, deskArray);
+let remove = "notebook";
+deskArray.splice(deskArray.indexOf(remove), 1);
+console.log(`Array with "${remove}" removed:`, deskArray);

@@ -12,7 +12,15 @@
  *  - Adds <figcaption> element with image description
  *  - Returns <figure> element to where function is called
  */
-
+const figureCreator = (data) => {
+  let figure = document.createElement("figure");
+  figure.innerHTML = `
+    <img src=${data.image} alt='${data.name}' width="200px"/>
+   <br>
+    <figcaption>${data.name}</figcaption>
+  `;
+  return figure;
+};
 const frogpack = {
   name: "Frog Backpack",
   volume: 8,
@@ -57,3 +65,34 @@ const content = `
       }</span></li>
     </ul>  
 `;
+
+function main(data) {
+  let article = document.createElement("article");
+  article.innerHTML = `
+  
+  <h1 class="backpack__name">${data.name}</h1>
+  <ul class="backpack__features">
+    <li class="packprop backpack__volume">Volume:<span> ${
+      data.volume
+    }l</span></li>
+    <li class="packprop backpack__color">Color:<span> ${data.color}</span></li>
+    <li class="packprop backpack__pockets">Number of pockets:<span> ${
+      data.pocketNum
+    }</span></li>
+    <li class="packprop backpack__strap">Left strap length:<span> ${
+      data.strapLength.left
+    } inches</span></li>
+    <li class="packprop backpack__strap">Right strap length:<span> ${
+      data.strapLength.right
+    } inches</span></li>
+    <li class="feature backpack__lid">Lid status:<span> ${
+      data.lidOpen ? "open" : "closed"
+    }</span></li>
+  </ul> 
+  <br>
+  `;
+  article.append(figureCreator(frogpack));
+
+  return article;
+}
+document.querySelector("main").append(main(frogpack));
